@@ -1,6 +1,6 @@
 module github.com/lumiere11/go-user-api
 
-go 1.24.5
+go 1.21
 
 require (
 	golang.org/x/crypto v0.33.0
