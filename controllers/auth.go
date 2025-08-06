@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"net/http"
+	"os"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -12,7 +13,7 @@ import (
 	"github.com/lumiere11/go-user-api/models"
 )
 
-var jwtKey = []byte("secret_key")
+var jwtKey = []byte(os.Getenv("JWT_SECRET_KEY"))
 
 func Register(c *gin.Context) {
 	var input models.User
